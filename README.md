@@ -2,7 +2,7 @@
 
 Ce dépôt github a pour but d'accompagner le cour [CICD pour Dev](https://eazytraining.fr/cours/cicd-pour-developpeurs-debutez-avec-le-devops-quand-on-est-developpeur/).
 
-Le repos github original est [celui ci] (https://github.com/Zerofiltre-Courses/cicd-testing-java-cours).
+Le repos github original est [celui ci](https://github.com/Zerofiltre-Courses/cicd-testing-java-cours).
 Il a été forké dans l'organisation github d'eazytraining.
 
 Dans le fork, vous retrouverez toutes les branches et tags du dépôt original,  plus la branche **eazytraining**.
