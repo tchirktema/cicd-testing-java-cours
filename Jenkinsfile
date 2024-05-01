@@ -24,7 +24,7 @@ node {
 
         stage('Sonarqube Analysis') {
             withSonarQubeEnv('sonarServer') {
-                sh " mvn sonar:sonar -s .m2/settings.xml -Dintegration-tests.skip=true -Dmaven.test.failure.ignore=true -Dsonar.login=squ_933ee3b5a4697765c2adaa1aa6d01ee1a7eada93"
+                sh " mvn sonar:sonar -s .m2/settings.xml -Dintegration-tests.skip=true -Dmaven.test.failure.ignore=true"
             }
             timeout(time: 1, unit: 'MINUTES') {
                 def qg = waitForQualityGate() // Reuse taskId previously collected by withSonarQubeEnv
