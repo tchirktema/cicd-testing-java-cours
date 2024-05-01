@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>tech.zerofiltre.testing</groupId>
+  <groupId>com.openclassrooms.testing</groupId>
   <artifactId>calculator</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <properties>
@@ -12,7 +12,6 @@
     <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
     <bootstrap.version>4.3.1</bootstrap.version>
     <springboot.version>2.2.0.RELEASE</springboot.version>
-    <sonar.projectKey>tech.zerofiltre.testing:calculator</sonar.projectKey>
   </properties>
 
   <parent>
@@ -73,6 +72,7 @@
       <artifactId>javax.inject</artifactId>
       <version>1</version>
     </dependency>
+
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
@@ -104,9 +104,13 @@
         </executions>
       </plugin>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+      </plugin>
+      <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.8.2</version>
+        <version>0.8.7</version>
         <executions>
           <execution>
             <goals>
