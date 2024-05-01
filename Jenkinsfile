@@ -24,7 +24,7 @@ node {
 
         stage('Sonarqube Analysis') {
             withSonarQubeEnv('sonarServer') {
-                sh " mvn sonar:sonar -Dintegration-tests.skip=true -Dmaven.test.failure.ignore=true"
+                sh " mvn sonar:sonar -s .m2/settings.xml -Dintegration-tests.skip=true -Dmaven.test.failure.ignore=true -Dsonar.login=squ_933ee3b5a4697765c2adaa1aa6d01ee1a7eada93"
             }
             timeout(time: 1, unit: 'MINUTES') {
                 def qg = waitForQualityGate() // Reuse taskId previously collected by withSonarQubeEnv
@@ -68,7 +68,7 @@ def imagePrune(containerName) {
         sh "docker stop $containerName"
     } catch (ignored) {
     }
-}
+}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
 
 def imageBuild(containerName, tag) {
     sh "docker build -t $containerName:$tag  -t $containerName --pull --no-cache ."
